@@ -9,7 +9,8 @@ export default {
     extend: {
       fontFamily: {
         merriweatherFont: ["Custom Font", "Merriweather"],
-        brygada1918Font: ["Custom Font", "Brygada1918"]
+        brygada1918Font: ["Custom Font", "Brygada1918"],
+        buenardFont: ["Custom Font", "Buenard"],
         // Add more custom font families as needed
       },
     },
