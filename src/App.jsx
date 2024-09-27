@@ -1,5 +1,4 @@
 import avatar from '../src/assets/avatar_img.jpg'
-import avatar2 from '../src/assets/avatar_img_2.jpg'
 import vietnam_flag from '../src/assets/vietnam_flag.png'
 import asian_hat from '../src/assets/asian-hat.png'
 import sparkle from '../src/assets/magic.png'
@@ -48,15 +47,8 @@ function App() {
       <div className="profile w-full flex mt-44">
         <div className="left w-2/4 flex flex-col items-center justify-center gap-4">
           <div className="avatar flex flex-col gap-4">
-            <label className="swap swap-flip text-9xl">
-              {/* this hidden checkbox controls the state */}
-              <input type="checkbox" />
-              <div className="swap-on">😈</div>
-              <div className="swap-off">😇</div>
-            </label>
             <div className="w-56 rounded-3xl">
               <img src={avatar} alt="Profile Picture" />
-              <img src={avatar2} alt="Profile Picture" />
             </div>
             <div className="about-me">
               <article className="max-w-96">
