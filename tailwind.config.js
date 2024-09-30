@@ -11,7 +11,15 @@ export default {
         merriweatherFont: ["Custom Font", "Merriweather"],
         brygada1918Font: ["Custom Font", "Brygada1918"],
         buenardFont: ["Custom Font", "Buenard"],
-        // Add more custom font families as needed
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+      },
+      animation: {
+        'loop-scroll': 'scroll 15s linear infinite',
       },
     },
   },
