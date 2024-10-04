@@ -8,9 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        merriweatherFont: ["Merriweather", "Custom Font"],
-        brygada1918Font: ["Brygada1918", "Custom Font"],
-        buenardFont: ["Buenard", "Custom Font"],
+        merriweatherFont: ["Merriweather", "sans-serif"],
+        brygada1918Font: ["Brygada1918", "sans-serif"],
+        buenardFont: ["Buenard", "sans-serif"],
       },
       keyframes: {
         scroll: {
