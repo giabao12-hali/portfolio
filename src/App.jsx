@@ -148,7 +148,7 @@ function App() {
                     <p className='email-address-title font-merriweatherFont text-2xl font-semibold mt-8'>Email Address</p>
                     <div className='email-address mt-4'>
                       <div className='w-full flex items-center'>
-                        <Send className='w-4 h-4 mr-4 sm:mr-0 translate-y-px' />
+                        <Send className='w-4 h-4 mr-4 translate-y-px' />
                         <a href="mailto:nguyenhiengiabao12@gmail.com" className="group transition duration-300 text-2xl font-brygada1918Font">
                           nguyenhiengiabao12@gmail.com
                           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
