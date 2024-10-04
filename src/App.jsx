@@ -8,6 +8,7 @@ import Aos from 'aos'
 import 'aos/dist/aos.css'
 import { useEffect } from 'react'
 import Slider from 'react-infinite-logo-slider'
+import ScrollIntoView from 'react-scroll-into-view'
 
 function App() {
 
@@ -19,44 +20,100 @@ function App() {
     <>
       <div className='w-full min-h-screen p-3'>
         <navbar>
-          <section>
-            <div className="navbar bg-base-100 px-8">
-              <div className="navbar-start">
-                <a href="#" className="group font-semibold text-3xl font-merriweatherFont transition duration-300">
-                  Hali
-                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-error"></span>
+          <div className='hidden sm:drawer sm:p-4'>
+            <input id='drawer-navbar' type='checkbox' className='drawer-toggle' />
+            <div className='drawer-content'>
+              <label className="group font-semibold text-3xl font-merriweatherFont transition duration-300 cursor-pointer drawer-button" htmlFor='drawer-navbar'>
+                Hali
+                <span className="block max-w-0 group-hover:max-w-14 transition-all duration-500 h-0.5 bg-error"></span>
+              </label>
+            </div>
+            <div className="drawer-side z-50">
+              <label htmlFor="drawer-navbar" aria-label="close sidebar" className="drawer-overlay"></label>
+              <ul className="menu bg-base-200 text-base-content min-h-full w-1/2 p-4">
+                <li>
+                  <ScrollIntoView selector='#about' alignToTop="true" className='cursor-pointer'>
+                    <a className="group text-gray-500 transition duration-300">
+                      About
+                      <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
+                    </a>
+                  </ScrollIntoView>
+                </li>
+                <li>
+                  <ScrollIntoView selector='#projects' alignToTop="true" className='cursor-pointer'>
+                    <a className="group text-gray-500 transition duration-300">
+                      Project
+                      <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
+                    </a>
+                  </ScrollIntoView>
+                </li>
+                <li>
+                  <ScrollIntoView selector='#projects' alignToTop="true" className='cursor-pointer'>
+                    <a className="group text-gray-500 transition duration-300">
+                      Contact
+                      <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
+                    </a>
+                  </ScrollIntoView>
+                </li>
+                <div className="divider"></div>
+                <label className="swap swap-rotate">
+                  <input type="checkbox" className="theme-controller" value="darkTheme" />
+                  <svg
+                    className="swap-off h-10 w-10 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M5.64,17l-.71.71a1,1,0,0,0,0,1.41,1,1,0,0,0,1.41,0l.71-.71A1,1,0,0,0,5.64,17ZM5,12a1,1,0,0,0-1-1H3a1,1,0,0,0,0,2H4A1,1,0,0,0,5,12Zm7-7a1,1,0,0,0,1-1V3a1,1,0,0,0-2,0V4A1,1,0,0,0,12,5ZM5.64,7.05a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41l-.71-.71A1,1,0,0,0,4.93,6.34Zm12,.29a1,1,0,0,0,.7-.29l.71-.71a1,1,0,1,0-1.41-1.41L17,5.64a1,1,0,0,0,0,1.41A1,1,0,0,0,17.66,7.34ZM21,11H20a1,1,0,0,0,0,2h1a1,1,0,0,0,0-2Zm-9,8a1,1,0,0,0-1,1v1a1,1,0,0,0,2,0V20A1,1,0,0,0,12,19ZM18.36,17A1,1,0,0,0,17,18.36l.71.71a1,1,0,0,0,1.41,0,1,1,0,0,0,0-1.41ZM12,6.5A5.5,5.5,0,1,0,17.5,12,5.51,5.51,0,0,0,12,6.5Zm0,9A3.5,3.5,0,1,1,15.5,12,3.5,3.5,0,0,1,12,15.5Z" />
+                  </svg>
+                  <svg
+                    className="swap-on h-10 w-10 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24">
+                    <path
+                      d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
+                  </svg>
+                </label>
+              </ul>
+            </div>
+          </div>
+          <div className="navbar bg-base-100 px-8 sm:hidden">
+            <div className="navbar-start">
+              <a href="#" className="group font-semibold text-3xl font-merriweatherFont transition duration-300">
+                Hali
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-error"></span>
+              </a>
+            </div>
+            <div className="navbar-end">
+              <div className="flex gap-12 text-2xl font-merriweatherFont">
+                <a href="" className="group text-gray-500 transition duration-300">
+                  Home
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
                 </a>
-              </div>
-              <div className="navbar-end">
-                <div className="flex gap-12 text-2xl font-merriweatherFont">
-                  <a href="#" className="group text-gray-500 transition duration-300">
-                    Home
-                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
-                  </a>
-
-                  <a href="#" className="group text-gray-500 transition duration-300">
+                <ScrollIntoView selector='#about' alignToTop="true" className='cursor-pointer'>
+                  <a className="group text-gray-500 transition duration-300">
                     About
                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
                   </a>
+                </ScrollIntoView>
 
-                  <a href="#" className="group text-gray-500 transition duration-300">
+                <ScrollIntoView selector='#projects' alignToTop="true" className='cursor-pointer'>
+                  <a className="group text-gray-500 transition duration-300">
                     Project
                     <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
                   </a>
-
-                  <a href="#" className="group text-gray-500 transition duration-300">
-                    Contact
-                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
-                  </a>
-                </div>
+                </ScrollIntoView>
+                <a href="#" className="group text-gray-500 transition duration-300">
+                  Contact
+                  <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
+                </a>
               </div>
             </div>
-          </section>
+          </div>
         </navbar>
         <main>
           <section>
-            <div className="profile w-full flex mt-44">
-              <div className="left w-2/4 flex flex-col items-center justify-center gap-4">
+            <div className="profile w-full flex mt-44 sm:flex-col sm:justify-center">
+              <div className="left w-2/4 flex flex-col items-center justify-center gap-4 sm:w-full">
                 <div className="avatar flex flex-col gap-4">
                   <div className="w-56 rounded-3xl" data-aos="fade-up" data-aos-duration="1000">
                     <img src={avatar} alt="Profile Picture" />
@@ -69,16 +126,16 @@ function App() {
                   </div>
                 </div>
               </div>
-              <div className="right w-2/4 flex flex-col items-center gap-4" data-aos="fade-up" data-aos-duration="2000">
-                <article className="about-me text-pretty" >
+              <div className="right w-2/4 flex flex-col items-center gap-4 sm:w-full" data-aos="fade-up" data-aos-duration="2000">
+                <article className="about-me text-pretty sm:text-balance">
                   <h3 className="font-bold text-5xl font-brygada1918Font pb-6">
                     Striving to turn the <span className="text-error"> impossible </span>into <span className="text-success">reality&nbsp;</span>through my&nbsp;<span className="text-warning">passion&nbsp;</span>in Website Development
                   </h3>
-                  <p className="text-gray-500 font-brygada1918Font text-xl font-bold max-w-3xl">
+                  <p className="text-gray-500 font-brygada1918Font text-xl font-bold max-w-3xl sm:text-end sm:w-full">
                     As a Web App Developer, I always strive to deliver fresh experiences and visually appealing interfaces for users. Simultaneously, I possess high-quality processing capabilities to meet user demands effectively.
                   </p>
                 </article>
-                <div className="w-full flex">
+                <div className="w-full flex sm:flex-col sm:gap-10">
                   <div className="w-3/4 flex flex-col">
                     <p className='location-title font-merriweatherFont text-2xl font-semibold'>Location</p>
                     <div className='location mt-4'>
@@ -91,7 +148,7 @@ function App() {
                     <p className='email-address-title font-merriweatherFont text-2xl font-semibold mt-8'>Email Address</p>
                     <div className='email-address mt-4'>
                       <div className='w-full flex items-center'>
-                        <Send className='w-4 h-4 mr-4 translate-y-px' />
+                        <Send className='w-4 h-4 mr-4 sm:mr-0 translate-y-px' />
                         <a href="mailto:nguyenhiengiabao12@gmail.com" className="group transition duration-300 text-2xl font-brygada1918Font">
                           nguyenhiengiabao12@gmail.com
                           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
@@ -99,7 +156,7 @@ function App() {
                       </div>
                     </div>
                   </div>
-                  <div className="w-2/4 flex flex-col">
+                  <div className="w-2/4 flex flex-col sm:w-full">
                     <p className='phone-title font-merriweatherFont text-2xl font-semibold'>Phone Number</p>
                     <div className='location mt-4'>
                       <div className='w-full flex items-center'>
@@ -109,13 +166,13 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className='w-full flex mt-8 gap-4'>
-                  <a href='/CV_ENG_NGUYENHIENGIABAO.pdf' download="CV_ENG_NGUYENHIENGIABAO" target='_blank' rel='noreferrer'>
-                    <button className='btn btn-success rounded-3xl h-auto p-4 btn-wide'>
-                      <p className='font-semibold text-[#FFFDE9] font-brygada1918Font text-2xl'>Hire Me</p>
-                    </button>
-                  </a>
-                  <button className='btn btn-outline rounded-3xl h-auto p-4 btn-wide'>
+                <div className='w-full flex mt-8 gap-4 sm:grid sm:grid-cols-2'>
+                  <button className='btn btn-success rounded-3xl h-auto p-4 btn-wide sm:w-full'>
+                    <a href='/CV_ENG_NGUYENHIENGIABAO.pdf' download="CV_ENG_NGUYENHIENGIABAO" target='_blank' rel='noreferrer'>
+                      <p className='font-semibold text-[#FFFDE9]  font-brygada1918Font text-2xl'>Hire Me</p>
+                    </a>
+                  </button>
+                  <button className='btn btn-outline rounded-3xl h-auto p-4 btn-wide sm:w-full'>
                     <a href="https://m.me/nguyengiabao01212" target='_blank'>
                       <p className='font-semibold font-brygada1918Font text-2xl'>Talk with me</p>
                     </a>
@@ -124,27 +181,29 @@ function App() {
               </div>
             </div>
           </section>
-          <div className="divider font-semibold text-3xl font-brygada1918Font my-24 px-12" data-aos="fade-up">
-            <img src={sparkle} className='w-10 h-10' />
+          <div id='about'></div>
+          <div className="divider font-semibold text-3xl font-brygada1918Font my-24 px-12 sm:p-0 sm:text-2xl" data-aos="fade-up" >
+            <img src={sparkle} className='w-10 h-10 sm:w-6 sm:h-6' />
             Anything about me
-            <img src={sparkle} className='w-10 h-10' />
+            <img src={sparkle} className='w-10 h-10 sm:w-6 sm:h-6' />
           </div>
           <section data-aos="fade-up">
-            <div className='anything-about-me grid grid-cols-3 my-12 px-24'>
+            <div className='anything-about-me grid grid-cols-3 my-12 px-24 text-balance text-2xl text-center font-buenardFont sm:flex sm:flex-col sm:gap-12 sm:px-10'>
               <div className='flex justify-center items-center'>
-                <p className='text-center text-balance text-2xl font-buenardFont'>Hello, I&apos;m Gia Bao, a Software Engineer with a background in studying at FPT Polytechnic College. I have gained practical experience by participating in various software development projects. Currently, my expertise is <span className='text-success'>primarily focused</span> on technologies related to <span className='text-[#67217a]'>.NET</span>, with additional experiences in the Frontend domain.
+                <p>Hello, I&apos;m Gia Bao, a Software Engineer with a background in studying at FPT Polytechnic College. I have gained practical experience by participating in various software development projects. Currently, my expertise is <span className='text-success'>primarily focused</span> on technologies related to <span className='text-[#67217a]'>.NET</span>, with additional experiences in the Frontend domain.
                 </p>
               </div>
               <div className='flex justify-center items-center'>
-                <p className='text-center text-balance text-2xl font-buenardFont'>I am eager to have the opportunity to contribute to problem-solving and bring new experiences to users. During my free time, I dedicate myself to learning new knowledge and practical applications, aiming to enhance my understanding and become an increasingly proficient programmer.</p>
+                <p>I am eager to have the opportunity to contribute to problem-solving and bring new experiences to users. During my free time, I dedicate myself to learning new knowledge and practical applications, aiming to enhance my understanding and become an increasingly proficient programmer.</p>
               </div>
               <div className='flex justify-center items-center'>
-                <p className='text-center text-balance text-2xl font-buenardFont'>My learning and exploration go beyond coding; I am passionate about generating innovative ideas to optimize values for everyone through the products I create. I look forward to opportunities that allow me to contribute to impactful solutions and provide new experiences for users.</p>
+                <p>My learning and exploration go beyond coding; I am passionate about generating innovative ideas to optimize values for everyone through the products I create. I look forward to opportunities that allow me to contribute to impactful solutions and provide new experiences for users.</p>
               </div>
             </div>
           </section>
+          <div id='projects'></div>
           <section className='px-12'>
-            <div className='my-24 flex flex-col justify-center'>
+            <div className='my-24 flex flex-col'>
               <div className='flex justify-center' data-aos="fade-up">
                 <p className='font-semibold text-3xl font-buenardFont'>TL;DR</p>
               </div>
@@ -163,7 +222,7 @@ function App() {
                           clipRule="evenodd" />
                       </svg>
                     </div>
-                    <div className="timeline-start mb-10 md:text-end">
+                    <div className="timeline-start mb-10 text-end">
                       <time className="font-mono italic">Jun 2023 ~ August 2023</time>
                       <div className="text-lg font-black">.NET Developer | Personal ASP.NET Blazor E-Commerce Website Project</div>
                       A personal project to develop an E-Commerce website using <span className='font-bold'>ASP.NET Blazor</span>. The project aims to provide a platform for users to purchase products and manage their accounts. The website will be designed with a user-friendly interface and optimized for performance and security to ensure a smooth shopping experience for users.
@@ -226,7 +285,7 @@ function App() {
                           clipRule="evenodd" />
                       </svg>
                     </div>
-                    <div className="timeline-start mb-10 md:text-end">
+                    <div className="timeline-start mb-10 text-end">
                       <time className="font-mono italic">January 2024 ~ February 2024</time>
                       <div className="text-lg font-black">Freelancer Front-End Developer | Metruyenchu</div>
                       A novel reading platform built using <span className='font-bold'>ReactJS</span> for the frontend and <span className='font-bold'>DaisyUI</span> for component-based styling, offering a responsive and user-friendly interface. The website ensures seamless navigation and enhances the reading experience with a modern, minimalist design.
@@ -300,7 +359,7 @@ function App() {
                           clipRule="evenodd" />
                       </svg>
                     </div>
-                    <div className="timeline-start mb-10 md:text-end">
+                    <div className="timeline-start mb-10 text-end">
                       <time className="font-mono italic">August 2024 ~ Present</time>
                       <div className="text-lg font-black">Learning Flutter & Dart</div>
                       Learning Flutter and Dart involves mastering a modern framework and programming language for building cross-platform mobile applications. Flutter offers a fast, efficient development process with a rich set of pre-designed widgets, while Dart is a clean, object-oriented language that enables high-performance, responsive UI development. Together, they allow for creating beautiful and scalable apps for iOS, Android, and beyond from a single codebase.
