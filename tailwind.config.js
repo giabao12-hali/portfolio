@@ -1,10 +1,7 @@
 /* eslint-disable no-undef */
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./src/**/*.{astro,html,svelte,vue,js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -31,7 +28,7 @@ export default {
   daisyui: {
     themes: [
       {
-        mytheme: {
+        light: {
           "primary": "#0066ff",
           "secondary": "#00baff",
           "accent": "#00cdff",
@@ -54,8 +51,8 @@ export default {
           "error": "#881337",
         }
       },
-      
     ],
   },
+  darkMode: ['class', '[data-theme="darkTheme"]']
 }
 
