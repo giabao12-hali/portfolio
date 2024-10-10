@@ -33,7 +33,7 @@ function App() {
               <ul className="menu bg-base-200 text-base-content min-h-full w-1/2 p-4">
                 <li>
                   <ScrollIntoView selector='#about' alignToTop="true" className='cursor-pointer'>
-                    <a className="group text-gray-500 dark:text-success transition duration-300">
+                    <a className="group transition duration-300">
                       About
                       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
                     </a>
@@ -41,7 +41,7 @@ function App() {
                 </li>
                 <li>
                   <ScrollIntoView selector='#projects' alignToTop="true" className='cursor-pointer'>
-                    <a className="group text-gray-500 transition duration-300">
+                    <a className="group transition duration-300">
                       Project
                       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
                     </a>
@@ -49,7 +49,7 @@ function App() {
                 </li>
                 <li>
                   <ScrollIntoView selector='#projects' alignToTop="true" className='cursor-pointer'>
-                    <a className="group text-gray-500 transition duration-300">
+                    <a className="group transition duration-300">
                       Contact
                       <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
                     </a>
@@ -59,7 +59,7 @@ function App() {
                 <div className='flex justify-between items-center mx-2'>
                   <p className='font-semibold'>Theme</p>
                   <label className="swap swap-rotate">
-                    <input type="checkbox" className="theme-controller" value="darkTheme" />
+                    <input type="checkbox" className="theme-controller" value="sunset" />
                     <svg
                       className="swap-off h-8 w-8 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +172,7 @@ function App() {
                 <div className='w-full flex mt-8 gap-4 sm:grid sm:grid-cols-2'>
                   <button className='btn btn-success rounded-3xl h-auto p-4 btn-wide sm:w-full'>
                     <a href='/CV_ENG_NGUYENHIENGIABAO.pdf' download="CV_ENG_NGUYENHIENGIABAO" target='_blank' rel='noreferrer'>
-                      <p className='font-semibold text-[#FFFDE9]  font-brygada1918Font text-2xl'>Hire Me</p>
+                      <p className='font-semibold text-base-100 font-brygada1918Font text-2xl'>Hire Me</p>
                     </a>
                   </button>
                   <button className='btn btn-outline rounded-3xl h-auto p-4 btn-wide sm:w-full'>
@@ -273,7 +273,7 @@ function App() {
                     <hr className='bg-success' />
                   </li>
                   <li>
-                    <hr className='bg-accent' />
+                    <hr className='bg-info' />
                     <div className="timeline-middle">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -290,10 +290,10 @@ function App() {
                       <time className='font-mono italic'>August 2024 ~ Present</time>
                       <div className="text-lg font-black sm:text-base">Learning Flutter & Dart</div>
                     </div>
-                    <hr className='bg-accent' />
+                    <hr className='bg-info' />
                   </li>
                   <li>
-                    <hr className='bg-accent' />
+                    <hr className='bg-info' />
                     <div className="timeline-start timeline-box">
                       <time className='font-mono italic'>August 2024 ~ Present</time>
                       <div className="text-lg font-black sm:text-base">Vietravel</div>
@@ -310,10 +310,10 @@ function App() {
                           clipRule="evenodd" />
                       </svg>
                     </div>
-                    <hr className='bg-accent' />
+                    <hr className='bg-info' />
                   </li>
                   <li>
-                    <hr className='bg-accent' />
+                    <hr className='bg-info' />
                     <div className="timeline-end timeline-box">
                       <div className="text-lg font-black sm:text-base">The Journey Begins</div>
                     </div>
@@ -536,7 +536,7 @@ function App() {
             <img src={sparkle} className='w-10 h-10 sm:w-6 sm:h-6' />
           </div>
           <section className='overflow-hidden w-full my-12' data-aos="fade-up">
-            <Slider blurBoderColor={['#fffde9', 'dark:#ff0000']}>
+            <Slider>
               <Slider.Slide >
                 <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target='_blank'>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" width={60} className="filter grayscale hover:filter-none transition duration-300" />

@@ -27,32 +27,9 @@ export default {
   ],
   daisyui: {
     themes: [
-      {
-        light: {
-          "primary": "#0066ff",
-          "secondary": "#00baff",
-          "accent": "#00cdff",
-          "neutral": "#111002",
-          "base-100": "#fffde9",
-          "info": "#00a1ff",
-          "success": "#00c492",
-          "warning": "#ffa800",
-          "error": "#cc001f",
-        },
-        darkTheme: {
-          "primary": "#f5f4f2",
-          "secondary": "#424244",
-          "accent": "#7f7e7c",
-          "neutral": "#504f4d",
-          "base-100": "#222222",
-          "info": "#d6d5d3",
-          "success": "#f9f6df",
-          "warning": "#c2c1bc",
-          "error": "#881337",
-        }
-      },
+      "retro",
+      "sunset"
     ],
   },
-  darkMode: ['class', '[data-theme="darkTheme"]']
 }
 
