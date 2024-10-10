@@ -18,9 +18,6 @@ export default {
           '100%': { transform: 'translateX(-100%)' },
         },
       },
-      animation: {
-        'loop-scroll': 'scroll 15s linear infinite',
-      },
     },
     screens: {
       'sm': {'min': '320px', 'max': '767px'},

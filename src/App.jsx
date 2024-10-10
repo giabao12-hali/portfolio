@@ -148,8 +148,8 @@ function App() {
                     <p className='email-address-title font-merriweatherFont text-2xl font-semibold mt-8'>Email Address</p>
                     <div className='email-address mt-4'>
                       <div className='w-full flex items-center'>
-                        <Send className='w-4 h-4 mr-4 translate-y-px' />
-                        <a href="mailto:nguyenhiengiabao12@gmail.com" className="group transition duration-300 text-2xl font-brygada1918Font">
+                        <Send className='w-4 h-4 mr-4 translate-y-px sm:hidden' />
+                        <a href="mailto:nguyenhiengiabao12@gmail.com" className="group transition duration-300 text-2xl font-brygada1918Font sm:text-xl">
                           nguyenhiengiabao12@gmail.com
                           <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-black"></span>
                         </a>
@@ -202,12 +202,134 @@ function App() {
             </div>
           </section>
           <div id='projects'></div>
-          <section className='px-12'>
+
+          <section className='px-12 sm:px-0'>
             <div className='my-24 flex flex-col'>
               <div className='flex justify-center' data-aos="fade-up">
                 <p className='font-semibold text-3xl font-buenardFont'>TL;DR</p>
               </div>
-              <div className='w-full mt-12'>
+              <div className='w-full mt-12 hidden sm:block'>
+                <ul className="timeline timeline-horizontal overflow-x-scroll no-scrollbar">
+                  <li>
+                    <div className="timeline-start timeline-box">
+                      <time className='font-mono italic'>Jun 2023 ~ August 2023</time>
+                      <div className="text-lg font-black sm:text-base">Personal ASP.NET Blazor E-Commerce</div>
+                    </div>
+                    <div className="timeline-middle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="text-success h-5 w-5">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <hr className="bg-success" />
+                  </li>
+                  <li>
+                    <hr className="bg-success" />
+                    <div className="timeline-middle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="text-success h-5 w-5">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div className="timeline-end timeline-box">
+                      <time className='font-mono italic'>September 2023 ~ December 2023</time>
+                      <div className="text-lg font-black sm:text-base">Graduation Donace Project</div>
+                    </div>
+                    <hr className="bg-success" />
+                  </li>
+                  <li>
+                    <hr className="bg-success" />
+                    <div className="timeline-start timeline-box">
+                      <time className='font-mono italic'>January 2024 ~ February 2024</time>
+                      <div className="text-lg font-black sm:text-base">HQSOFT - Distribution & Retail Expert</div>
+                    </div>
+                    <div className="timeline-middle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="text-success h-5 w-5">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <hr className='bg-success' />
+                  </li>
+                  <li>
+                    <hr className='bg-accent' />
+                    <div className="timeline-middle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-5 w-5">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <div className="timeline-end timeline-box">
+                      <time className='font-mono italic'>August 2024 ~ Present</time>
+                      <div className="text-lg font-black sm:text-base">Learning Flutter & Dart</div>
+                    </div>
+                    <hr className='bg-accent' />
+                  </li>
+                  <li>
+                    <hr className='bg-accent' />
+                    <div className="timeline-start timeline-box">
+                      <time className='font-mono italic'>August 2024 ~ Present</time>
+                      <div className="text-lg font-black sm:text-base">Vietravel</div>
+                    </div>
+                    <div className="timeline-middle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-5 w-5">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <hr className='bg-accent' />
+                  </li>
+                  <li>
+                    <hr className='bg-accent' />
+                    <div className="timeline-end timeline-box">
+                      <div className="text-lg font-black sm:text-base">The Journey Begins</div>
+                    </div>
+                    <div className="timeline-middle">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20"
+                        fill="currentColor"
+                        className="h-5 w-5">
+                        <path
+                          fillRule="evenodd"
+                          d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
+                          clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div className='w-full mt-12 sm:hidden'>
                 <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical" >
                   <li data-aos="fade-up">
                     <div className="timeline-middle">
@@ -366,13 +488,12 @@ function App() {
                       <div className='flex flex-col justify-end mt-4 gap-2'>
                         <div>
                           <p className='italic py-2'>*Because I am still continuing to learn and get familiar with the Flutter interface and the Dart language, you can follow my progress on developing apps here:</p>
-                          <p className='cursor-default font-semibold items-center flex justify-end'>
+                          <p className='cursor-default font-semibold items-center justify-end'>
                             Flutter is so much&nbsp;
                             <a className='link tooltip tooltip-bottom' data-tip="ohh you found me again" href='https://github.com/giabao12-hali/flutter-project-collection' target='_blank'>fun</a>
                             &nbsp;
-                            <label className="swap swap-flip text-base" >
+                            <label className="swap swap-flip text-base sm:translate-y-1 md:translate-y-1" >
                               <input type="checkbox" />
-
                               <div className="swap-off tooltip" data-tip="this time">👈</div>
                               <div className="swap-on tooltip" data-tip="no wrong way anymore">👉</div>
                             </label>
@@ -406,13 +527,13 @@ function App() {
               </div>
             </div>
           </section>
-          <div className="divider font-semibold text-3xl font-brygada1918Font my-24 px-12" data-aos="fade-up">
-            <img src={sparkle} className='w-10 h-10' />
+          <div className="divider font-semibold text-3xl font-brygada1918Font my-24 px-12 sm:p-0 sm:text-2xl" data-aos="fade-up" >
+            <img src={sparkle} className='w-10 h-10 sm:w-6 sm:h-6' />
             Techincal Skills
-            <img src={sparkle} className='w-10 h-10' />
+            <img src={sparkle} className='w-10 h-10 sm:w-6 sm:h-6' />
           </div>
           <section className='overflow-hidden w-full my-12' data-aos="fade-up">
-            <Slider blurBorders={true} blurBoderColor={'#fffde9'}>
+            <Slider blurBoderColor={['#fffde9', 'dark:#ff0000']}>
               <Slider.Slide >
                 <a href='https://developer.mozilla.org/en-US/docs/Web/JavaScript' target='_blank'>
                   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" width={60} className="filter grayscale hover:filter-none transition duration-300" />
@@ -492,7 +613,7 @@ function App() {
           </div>
         </nav>
         <aside>
-          <p className='flex items-center'>Copyright © {new Date().getFullYear()} - <span className='font-semibold'>Thanks for scrolling,</span>&nbsp;that&apos;s all folks <Heart className='w-4 h-4 ml-1' /></p>
+          <p className='flex items-center sm:flex sm:flex-col sm:gap-4'>Copyright © {new Date().getFullYear()} - <span className='font-semibold'>Thanks for scrolling,</span>&nbsp;that&apos;s all folks <Heart className='w-4 h-4 ml-1' /></p>
         </aside>
       </footer>
     </>
