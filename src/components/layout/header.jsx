@@ -19,7 +19,7 @@ const HeaderLayout = () => {
                         <ul className="menu bg-base-200 text-base-content min-h-full w-1/2 p-4">
                             <li>
                                 <ScrollIntoView selector='#about' alignToTop="true" className='cursor-pointer'>
-                                    <a className="group transition duration-300">
+                                    <a className="group transition duration-300 font-serif">
                                         About
                                         <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
                                     </a>
@@ -27,15 +27,21 @@ const HeaderLayout = () => {
                             </li>
                             <li>
                                 <ScrollIntoView selector='#projects' alignToTop="true" className='cursor-pointer'>
-                                    <a className="group transition duration-300">
+                                    <a className="group transition duration-300 font-serif">
                                         Project
                                         <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
                                     </a>
                                 </ScrollIntoView>
                             </li>
                             <li>
+                                <Link to="/recap" className="group transition duration-300 font-serif">
+                                    Recap
+                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
+                                </Link>
+                            </li>
+                            <li>
                                 <ScrollIntoView selector='#projects' alignToTop="true" className='cursor-pointer'>
-                                    <a className="group transition duration-300">
+                                    <a className="group transition duration-300 font-serif">
                                         Contact
                                         <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
                                     </a>
