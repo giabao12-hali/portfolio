@@ -44,10 +44,10 @@ const Recap = () => {
                                             clipRule="evenodd" />
                                     </svg>
                                 </div>
-                                <div className="timeline-start mb-10 sm:text-end">
+                                <div className="timeline-start mb-10 text-balance text-end">
                                     <time className="font-mono italic">2003</time>
                                     <div className="text-lg font-black">First time seeing the world</div>
-                                    Hi, I&apos;m Gia Bao. I&apos;m a software engineer. I was born in 2003 in Vietnam.
+                                    Hi, I&apos;m Gia Bao. I officially saw the world we are living in today for the first time in 2003, when the whole sky was very beautiful, because that day was the last day of the 2003 Sea Games sports festival.
                                 </div>
                                 <hr />
                             </li>
@@ -66,11 +66,10 @@ const Recap = () => {
                                     </svg>
                                 </div>
                                 <div className="timeline-end mb-10">
-                                    <time className="font-mono italic">1998</time>
-                                    <div className="text-lg font-black">iMac</div>
-                                    iMac is a family of all-in-one Mac desktop computers designed and built by Apple Inc. It has
-                                    been the primary part of consumer desktop offerings since its debut in August 1998,
-                                    and has evolved through seven distinct forms
+                                    <time className="font-mono italic">2019</time>
+                                    <div className="text-lg font-black">First time learning about programming</div>
+                                    When the COVID-19 pandemic broke out, I spent time learning about programming. That was the first time I discovered Discord and its Bots (playing music, mini games, quizzes, etc.). I found it quite interesting, so I explored and managed to write my first Bot with <span className="font-bold">JavaScript.</span>
+                                    <div className="pt-4 italic">It&apos;s on my old computer, so there&apos;s no source available, hehe.</div>
                                 </div>
                                 <hr />
                             </li>
@@ -88,14 +87,10 @@ const Recap = () => {
                                             clipRule="evenodd" />
                                     </svg>
                                 </div>
-                                <div className="timeline-start mb-10 md:text-end">
-                                    <time className="font-mono italic">2001</time>
-                                    <div className="text-lg font-black">iPod</div>
-                                    The iPod is a discontinued series of portable media players and multi-purpose mobile devices
-                                    designed and marketed by Apple Inc. The first version was released on October 23, 2001, about
-                                    8+1⁄2 months after the Macintosh version of iTunes was released. Apple sold an estimated 450
-                                    million iPod products as of 2022. Apple discontinued the iPod product line on May 10, 2022. At
-                                    over 20 years, the iPod brand is the oldest to be discontinued by Apple
+                                <div className="timeline-start mb-10 text-end">
+                                    <time className="font-mono italic">2021</time>
+                                    <div className="text-lg font-black">Started learning what is programming mean</div>
+                                    It was the first time I enrolled in a school that taught computer science. During my time there, I learned and explored new technologies. The main language I was taught at school was <span className="font-bold">C#,</span> and later, I self-studied <span className="font-bold">ReactJS</span> to help with interface development.
                                 </div>
                                 <hr />
                             </li>
@@ -114,36 +109,9 @@ const Recap = () => {
                                     </svg>
                                 </div>
                                 <div className="timeline-end mb-10">
-                                    <time className="font-mono italic">2007</time>
-                                    <div className="text-lg font-black">iPhone</div>
-                                    iPhone is a line of smartphones produced by Apple Inc. that use own iOS mobile
-                                    operating system. The first-generation iPhone was announced by then-Apple CEO Steve Jobs on
-                                    January 9, 2007. Since then, Apple has annually released new iPhone models and iOS updates. As
-                                    of November 1, 2018, more than 2.2 billion iPhones had been sold. As of 2022, the iPhone
-                                    accounts for 15.6% of global smartphone market share
-                                </div>
-                                <hr />
-                            </li>
-                            <li>
-                                <hr />
-                                <div className="timeline-middle">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        viewBox="0 0 20 20"
-                                        fill="currentColor"
-                                        className="h-5 w-5">
-                                        <path
-                                            fillRule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                                            clipRule="evenodd" />
-                                    </svg>
-                                </div>
-                                <div className="timeline-start mb-10 md:text-end">
-                                    <time className="font-mono italic">2015</time>
-                                    <div className="text-lg font-black">Apple Watch</div>
-                                    The Apple Watch is a line of smartwatches produced by Apple Inc. It incorporates fitness
-                                    tracking, health-oriented capabilities, and wireless telecommunication, and integrates with
-                                    iOS and other Apple products and services
+                                    <time className="font-mono italic">2024</time>
+                                    <div className="text-lg font-black">Exploring the technologies that companies are currently using.</div>
+                                    Of course, right now I&apos;m sitting at the office and writing these lines (yes, the very lines you&apos;re reading). So, consider this as a milestone for me to continue developing my skills.
                                 </div>
                             </li>
                         </ul>
