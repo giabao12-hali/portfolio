@@ -73,7 +73,7 @@ const HeaderLayout = () => {
                 </div>
                 <div className="navbar bg-base-100 px-8 sm:hidden">
                     <div className="navbar-start">
-                        <a href="" className="group font-semibold text-3xl font-merriweatherFont transition duration-300">
+                        <a href="/" className="group font-semibold text-3xl font-merriweatherFont transition duration-300">
                             Hali
                             <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-error"></span>
                         </a>

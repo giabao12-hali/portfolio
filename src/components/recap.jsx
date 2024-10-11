@@ -1,37 +1,26 @@
-import { useRef, useState, useEffect } from "react";
+import { useEffect } from "react";
 import HeaderLayout from "./layout/header";
-import musicAudio from '../about_you.mp3'
-import { Container, Button } from 'react-floating-action-button'
-import { Menu, Disc3 } from "lucide-react";
+import musicAudio from '../assets/about_you.mp3'
+import sparkle from '../assets/magic.png'
+import MusicPlayerLayout from "./layout/player_layout";
+import Aos from 'aos'
+import 'aos/dist/aos.css'
+import FooterLayout from "./layout/footer";
 
 const Recap = () => {
-    const audioRef = useRef(null);
-    const [isPlaying, setIsPlaying] = useState(false);
-
     useEffect(() => {
-        if (audioRef.current) {
-            audioRef.current.volume = 0.5;
-        }
-    }, []);
-
-    const handlePlayPauseMusic = () => {
-        if (isPlaying) {
-            audioRef.current.pause();
-        } else {
-            audioRef.current.play();
-        }
-        setIsPlaying(!isPlaying);
-    };
+        Aos.init();
+    }, [])
 
     return (
         <>
-            <div className="w-full min-h-screen p-3">
+            <div className="w-full min-h-screen p-3 mb-12">
                 <HeaderLayout />
                 <main>
-                    <h1 className="font-bold text-center pt-12 uppercase text-2xl font-brygada1918Font">story about me</h1>
+                    <h1 className="font-bold text-center pt-12 uppercase text-2xl font-brygada1918Font" data-aos="fade-up">story about me</h1>
                     <div className="flex justify-center w-full my-12">
                         <ul className="timeline timeline-snap-icon max-sm:timeline-compact timeline-vertical lg:mx-24">
-                            <li>
+                            <li data-aos="fade-up">
                                 <div className="timeline-middle">
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +40,7 @@ const Recap = () => {
                                 </div>
                                 <hr />
                             </li>
-                            <li>
+                            <li data-aos="fade-up">
                                 <hr />
                                 <div className="timeline-middle">
                                     <svg
@@ -73,7 +62,7 @@ const Recap = () => {
                                 </div>
                                 <hr />
                             </li>
-                            <li>
+                            <li data-aos="fade-up">
                                 <hr />
                                 <div className="timeline-middle">
                                     <svg
@@ -94,7 +83,7 @@ const Recap = () => {
                                 </div>
                                 <hr />
                             </li>
-                            <li>
+                            <li data-aos="fade-up">
                                 <hr />
                                 <div className="timeline-middle">
                                     <svg
@@ -116,26 +105,60 @@ const Recap = () => {
                             </li>
                         </ul>
                     </div>
+                    <div>
+                        <div className="divider font-semibold text-3xl font-brygada1918Font my-24 px-12 sm:p-0 sm:text-2xl" data-aos="fade-up">
+                            <img src={sparkle} className='w-10 h-10 sm:w-6 sm:h-6' />
+                            Education
+                            <img src={sparkle} className='w-10 h-10 sm:w-6 sm:h-6' />
+                        </div>
+                        <div className="grid grid-cols-2 sm:flex sm:flex-col gap-6" data-aos="fade-up">
+                            <div className="text-center">
+                                <div className="mx-12 space-y-4">
+                                    <h1 className="text-2xl font-bold font-buenardFont">Graduate</h1>
+                                    <div className="text-left space-y-2">
+                                        <time className="font-semibold italic">August 2021 ~ May 2024</time>
+                                        <h1 className="uppercase font-bold">
+                                            INFORMATION TECHNOLOGY - SOFTWARE DEVELOPMENT (C#)
+                                        </h1>
+                                        <p>FPT Polytechnic College</p>
+                                        <h1 className="font-bold">Rewards:</h1>
+                                        <div>
+                                            <p>
+                                                Received the Excellent Student title in Summer 2022.
+                                            </p>
+                                            <p>
+                                                Received the Excellent Student title in Summer 2023.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="hidden sm:divider mx-8"></div>
+                            <div className="text-center">
+                                <div className="mx-12 space-y-4">
+                                    <h1 className="text-2xl font-bold font-buenardFont">Certifications</h1>
+                                    <div className="text-left space-y-12">
+                                        <div>
+                                            <time className="font-semibold italic">July 2023</time>
+                                            <h1 className="uppercase font-bold">
+                                                Google Data Analytics Professional Certificate.
+                                            </h1>
+                                        </div>
+                                        <div>
+                                            <time className="font-semibold italic">July 2023</time>
+                                            <h1 className="uppercase font-bold">
+                                                ACADEMIC PREPARATORY ENGLISH Level 3 - Topnotch 2.
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </main>
             </div>
-            <Container>
-                <Button
-                    styles={{ backgroundColor: '#383836', color: '#f5f4f2' }}
-                    tooltip="Play Music"
-                    onClick={handlePlayPauseMusic}
-                >
-                    <Disc3 />
-                </Button>
-                <Button
-                    styles={{ backgroundColor: '#504f4d', color: '#d6d5d3' }}
-                    tooltip="Function"
-                >
-                    <Menu />
-                </Button>
-            </Container>
-            <audio ref={audioRef} loop>
-                <source src={musicAudio} type="audio/mp3" />
-            </audio>
+            <FooterLayout />
+            <MusicPlayerLayout musicAudio={musicAudio} />
         </>
     );
 }
