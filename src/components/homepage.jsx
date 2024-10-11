@@ -15,7 +15,7 @@ const HomePage = () => {
     }, [])
 
     return (
-        <>
+        <div>
             <div className='w-full min-h-screen p-3'>
                 <HeaderLayout />
                 <main>
@@ -38,7 +38,7 @@ const HomePage = () => {
                 </main>
             </div>
             <FooterLayout />
-        </>
+        </div>
     );
 }
 

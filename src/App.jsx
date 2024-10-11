@@ -5,7 +5,7 @@ import HomePage from './components/homepage';
 function App() {
   return (
     <Router>
-      <div className='w-full min-h-screen'>
+      <div className='w-full min-h-screen scrollbar-hide'>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/recap" element={<Recap />} />

@@ -18,6 +18,14 @@ const HeaderLayout = () => {
                         <label htmlFor="drawer-navbar" aria-label="close sidebar" className="drawer-overlay"></label>
                         <ul className="menu bg-base-200 text-base-content min-h-full w-1/2 p-4">
                             <li>
+                                <Link to="/" >
+                                    <a className="group font-semibold text-3xl font-merriweatherFont transition duration-300 no-animation">
+                                        Hali
+                                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-error"></span>
+                                    </a>
+                                </Link>
+                            </li>
+                            <li>
                                 <ScrollIntoView selector='#about' alignToTop="true" className='cursor-pointer'>
                                     <a className="group transition duration-300 font-serif">
                                         About
@@ -34,9 +42,11 @@ const HeaderLayout = () => {
                                 </ScrollIntoView>
                             </li>
                             <li>
-                                <Link to="/recap" className="group transition duration-300 font-serif">
-                                    Recap
-                                    <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
+                                <Link to="/recap" >
+                                    <a className="group transition duration-300 font-serif">
+                                        Recap
+                                        <span className="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-gray-500"></span>
+                                    </a>
                                 </Link>
                             </li>
                             <li>

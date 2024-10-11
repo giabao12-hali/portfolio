@@ -23,7 +23,7 @@ export default {
     },
   },
   plugins: [
-    require('daisyui'),
+    require('tailwind-scrollbar-hide'), require('daisyui'),
   ],
   daisyui: {
     themes: [

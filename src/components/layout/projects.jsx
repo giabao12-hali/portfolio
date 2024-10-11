@@ -9,7 +9,7 @@ const ProjectsLayout = () => {
                         <p className='font-semibold text-3xl font-buenardFont'>TL;DR</p>
                     </div>
                     <div className='w-full mt-12 hidden sm:block' data-aos="fade-up">
-                        <ul className="timeline timeline-horizontal overflow-x-scroll no-scrollbar">
+                        <ul className="timeline timeline-horizontal overflow-x-scroll scrollbar-hide">
                             <li>
                                 <div className="timeline-start timeline-box">
                                     <time className='font-mono italic'>Jun 2023 ~ August 2023</time>

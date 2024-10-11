@@ -155,6 +155,13 @@ const Recap = () => {
                             </div>
                         </div>
                     </div>
+                    <div>
+                        <div className="divider font-semibold text-3xl font-brygada1918Font my-24 px-12 sm:p-0 sm:text-2xl" data-aos="fade-up">
+                            <img src={sparkle} className='w-10 h-10 sm:w-6 sm:h-6' />
+                            Little things i like
+                            <img src={sparkle} className='w-10 h-10 sm:w-6 sm:h-6' />
+                        </div>
+                    </div>
                 </main>
             </div>
             <FooterLayout />
